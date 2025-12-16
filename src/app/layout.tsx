@@ -8,7 +8,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Ashera",
     description: "Mystical Health & Astrology Tracker",
+    icons: {
+        icon: "/icon.png",
+        apple: "/icon.png",
+    },
+    manifest: "/manifest.json",
 };
+
+export const viewport = {
+    themeColor: "#000000",
+};
+
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function RootLayout({
     children,
@@ -16,8 +27,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
+                <AuthProvider>
+                    {children}
+                </AuthProvider>
+            </body>
         </html>
     );
 }
