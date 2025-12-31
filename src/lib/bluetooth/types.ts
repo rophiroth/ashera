@@ -13,6 +13,7 @@ export interface RingData {
     batteryLevel?: number;
     isCharging?: boolean;
     timestamp: number;
+    readings?: string[]; // Raw candidates for debugging
 }
 
 export interface BluetoothState {
@@ -27,4 +28,7 @@ export interface BluetoothState {
     measureSPO2: () => Promise<void>;
     measureStress: () => Promise<void>;
     syncSteps: () => Promise<void>;
+    packetLog: string[];
+    sendRaw: (cmdIdx: number, subIds: number[]) => Promise<void>;
+    isHealthSupported?: boolean;
 }

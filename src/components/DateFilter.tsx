@@ -1,111 +1,61 @@
 "use client";
 
 import * as React from "react";
-import { CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
-export interface DateRange {
-    from: Date;
-    to: Date;
-}
 
 interface DateFilterProps {
-    date: DateRange | undefined;
-    setDate: (date: DateRange | undefined) => void;
+    startDate: Date;
+    setStartDate: (date: Date) => void;
+    rangeStr: string;
+    onRangeChange: (range: string) => void;
     className?: string;
 }
 
-export function DateFilter({ date, setDate, className }: DateFilterProps) {
-    const [isOpen, setIsOpen] = React.useState(false);
+export function DateFilter({ startDate, setStartDate, rangeStr, onRangeChange, className }: DateFilterProps) {
 
-    const handlePresetChange = (value: string) => {
-        const today = new Date();
-        let newDate: DateRange | undefined;
+    // Format YYYY-MM-DD for input
+    const dateValue = startDate ? startDate.toISOString().split('T')[0] : '';
 
-        switch (value) {
-            case "1d":
-                newDate = { from: today, to: today };
-                break;
-            case "7d":
-                const prev7 = new Date(today);
-                prev7.setDate(today.getDate() - 6);
-                newDate = { from: prev7, to: today };
-                break;
-            case "30d":
-                const prev30 = new Date(today);
-                prev30.setDate(today.getDate() - 29);
-                newDate = { from: prev30, to: today };
-                break;
-            // Todo: Add Perigee-Apogee logic here when API is available
-        }
-
-        if (newDate) {
-            setDate(newDate);
+    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.value) {
+            // Parse local date strictly
+            const [y, m, d] = e.target.value.split('-').map(Number);
+            const newDate = new Date(y, m - 1, d);
+            setStartDate(newDate);
         }
     };
 
     return (
-        <div className={cn("grid gap-2", className)}>
-            <div className="flex items-center gap-2">
-                <Popover open={isOpen} onOpenChange={setIsOpen}>
-                    <PopoverTrigger asChild>
-                        <Button
-                            id="date"
-                            variant={"outline"}
-                            className={cn(
-                                "w-auto justify-start text-left font-normal border-zinc-700 bg-zinc-900/50 text-zinc-100 hover:bg-zinc-800 h-8 px-2 text-xs",
-                                !date && "text-muted-foreground",
-                                className
-                            )}
-                        >
-                            <CalendarIcon className="mr-2 h-3 w-3" />
-                            {date?.from ? (
-                                date.to ? (
-                                    <>
-                                        {format(date.from, "MMM d")} - {format(date.to, "MMM d")}
-                                    </>
-                                ) : (
-                                    format(date.from, "MMM d")
-                                )
-                            ) : (
-                                <span>Pick date</span>
-                            )}
-                        </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                            initialFocus
-                            mode="range"
-                            defaultMonth={date?.from}
-                            selected={date as any}
-                            onSelect={setDate as any}
-                            numberOfMonths={2}
-                        />
-                    </PopoverContent>
-                </Popover>
+        <div className={cn("flex flex-col md:flex-row gap-2 items-center", className)}>
 
-                <Select onValueChange={handlePresetChange}>
-                    <SelectTrigger className="w-[140px] border-zinc-700 bg-zinc-900/50 text-zinc-100">
-                        <SelectValue placeholder="Quick Select" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="1d">Today</SelectItem>
-                        <SelectItem value="7d">Last 7 Days</SelectItem>
-                        <SelectItem value="30d">Last 30 Days</SelectItem>
-                        <SelectItem value="cycle">Current Cycle</SelectItem>
-                        {/* Placeholder for Astro Logic */}
-                        <SelectItem value="moon" disabled>Perigee - Apogee</SelectItem>
-                    </SelectContent>
-                </Select>
+            {/* Range Presets */}
+            <div className="flex items-center bg-zinc-900/50 rounded-lg p-1 border border-zinc-700">
+                {['1d', '7d', '30d', 'ALL'].map((r) => (
+                    <Button
+                        key={r}
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => onRangeChange(r)}
+                        className={cn(
+                            "h-7 px-3 text-xs hover:bg-zinc-800 hover:text-white transition-colors uppercase",
+                            rangeStr === r ? "bg-zinc-700 text-white" : "text-zinc-400"
+                        )}
+                    >
+                        {r}
+                    </Button>
+                ))}
+            </div>
+
+            {/* Single Start Date Picker */}
+            <div className="flex items-center gap-2">
+                <span className="text-xs text-zinc-500 font-medium">Start:</span>
+                <input
+                    type="date"
+                    value={dateValue}
+                    onChange={handleDateChange}
+                    className="h-8 px-2 text-xs bg-zinc-900/50 border border-zinc-700 rounded-md text-white focus:outline-none focus:ring-1 focus:ring-purple-500"
+                />
             </div>
         </div>
     );

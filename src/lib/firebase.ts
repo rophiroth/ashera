@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeFirestore, enableIndexedDbPersistence } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -19,7 +19,22 @@ const app = getApps().length > 0
 // Safe exports that won't crash if app is null (during build without keys)
 // Cast to any to bypass strict type checks for the mock, as this is just to pass build
 const auth = app ? getAuth(app) : ({} as any);
-const db = app ? getFirestore(app) : ({} as any);
+
+// Force Long Polling to bypass firewall/proxy issues
+// This creates a standard HTTP stream instead of a WebSocket
+// Also enable Offline Persistence via new cache API
+import { persistentLocalCache, persistentMultipleTabManager } from "firebase/firestore";
+
+const db = app ? initializeFirestore(app, {
+    experimentalForceLongPolling: true, // Bypass Firewall/Proxy that blocks WebSockets
+    localCache: persistentLocalCache({
+        tabManager: persistentMultipleTabManager()
+    })
+}, "ashera") : ({} as any);
+
+// Legacy method removed to avoid deprecation warning
+// enableIndexedDbPersistence is now handled in initializeFirestore config
+
 const googleProvider = new GoogleAuthProvider();
 
 export { app, auth, db, googleProvider };

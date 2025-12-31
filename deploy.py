@@ -149,6 +149,23 @@ def main():
         
         upload_dir_smart(sftp, transport, LOCAL_BUILD_DIR, REMOTE_BASE)
         
+        # 4. Post-Deploy Permission Fix
+        print("  Fixing remote permissions...")
+        try:
+             # Standard Web Permissions: 755 for Dirs, 644 for Files
+             # We use a recursive native command for speed
+             session = transport.open_session()
+             cmd = f"chmod -R 755 {REMOTE_BASE} && find {REMOTE_BASE} -type f -exec chmod 644 {{}} \;"
+             session.exec_command(cmd)
+             exit_status = session.recv_exit_status()
+             if exit_status == 0:
+                 print("  Permissions fixed (755/644).")
+             else:
+                 print("  Warning: Permission fix returned non-zero status.")
+             session.close()
+        except Exception as e:
+            print(f"  Failed to set permissions: {e}")
+        
         print("\n-------------------------------------------------")
         print("DEPLOYMENT SYNC COMPLETE!")
         print(f"Visit https://ashera.psyhackers.org to test.")
