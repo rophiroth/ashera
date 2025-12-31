@@ -393,14 +393,16 @@ export function BluetoothDebugger({ isOpen, onClose, bt }: BluetoothDebuggerProp
                             )}
                         </div>
                     </div>
-                    {/* FIXED CLOSE BUTTON FOR MOBILE SAFE AREA */}
-                    <button
-                        onClick={onClose}
-                        className="p-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 rounded-full active:scale-95 transition-transform"
-                    >
-                        <X size={24} />
-                    </button>
                 </div>
+
+                {/* ABSOLUTE CLOSE BUTTON (Safety Hatch) */}
+                <button
+                    onClick={onClose}
+                    className="absolute top-2 right-2 p-2 bg-red-600 hover:bg-red-500 text-white rounded-full shadow-lg z-50 active:scale-90 transition-transform"
+                    style={{ zIndex: 9999 }}
+                >
+                    <X size={20} />
+                </button>
 
                 {/* CLOUD MIRROR */}
                 <div className={`p-2 bg-blue-900/10 border-b border-blue-500/20 text-[10px] font-mono shrink-0 transition-all duration-300 ${isCloudExpanded ? 'max-h-32' : 'max-h-8'} overflow-hidden flex flex-col`}>
