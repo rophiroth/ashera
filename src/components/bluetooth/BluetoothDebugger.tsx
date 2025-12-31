@@ -437,7 +437,7 @@ export function BluetoothDebugger({ isOpen, onClose, bt }: BluetoothDebuggerProp
                             <span>LATEST BATCH ({bt.lastData.readings.length} pts):</span>
                         </div>
                         <div className="flex flex-wrap gap-1">
-                            {bt.lastData.readings.map((r, i) => (
+                            {bt.lastData.readings.map((r: any, i: number) => (
                                 <span key={i} className="bg-yellow-500/10 text-yellow-200 px-1 rounded border border-yellow-500/20">{r}</span>
                             ))}
                         </div>
