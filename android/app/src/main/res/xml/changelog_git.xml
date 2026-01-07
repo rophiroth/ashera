@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="initial" versioncode="1">
+       <change>Initial integration of Gadgetbridge modules.</change>
+    </release>
+</changelog>

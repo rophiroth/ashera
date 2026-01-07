@@ -1,0 +1,9 @@
+^<configuration^>^<appender
+name=LOGCAT
+class=ch.qos.logback.classic.android.LogcatAppender^>^<tagEncoder^>^<pattern^>%logger
+12
+^</pattern^>^</tagEncoder^>^<encoder^>^<pattern^>[%-5level]
+%msg%n^</pattern^>^</encoder^>^</appender^>^<root
+level=INFO^>^<appender-ref
+ref=LOGCAT
+/^>^</root^>^</configuration^>

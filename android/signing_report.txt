@@ -1,0 +1,97 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:signingReport
+Variant: debug
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+Variant: release
+Config: null
+Store: null
+Alias: null
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+> Task :capacitor-android:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+> Task :capacitor-app:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+> Task :capacitor-community-bluetooth-le:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+> Task :capacitor-cordova-android-plugins:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+> Task :codetrix-studio-capacitor-google-auth:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Ro\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: FB:2A:95:D1:E0:B3:65:52:30:94:62:12:59:9C:AF:4B
+SHA1: 95:DF:A4:36:5C:3D:B5:B4:CC:A3:DC:C6:CC:70:0E:BA:3C:76:8A:E2
+SHA-256: 36:21:58:56:F9:70:11:8A:9E:7A:2D:AD:D4:40:0C:22:73:8B:EE:82:34:CE:EC:FD:75:15:5C:44:90:9E:34:6A
+Valid until: Sunday, October 3, 2055
+----------
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 27s
+6 actionable tasks: 6 executed

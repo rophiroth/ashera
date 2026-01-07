@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ashera Mobile</string>
+    <string name="title_activity_main">Ashera Mobile</string>
+    <string name="package_name">org.psyhackers.Ashera</string>
+    <string name="custom_url_scheme">org.psyhackers.Ashera</string>
+    <string name="applicationId">org.psyhackers.Ashera</string>
+    <string name="about_description">Ashera Ring App</string>
+    <string name="gadgetbridge_running">Ashera Service is running</string>
+</resources>

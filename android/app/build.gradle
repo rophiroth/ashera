@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'com.google.protobuf'
+
+android {
+    namespace = "nodomain.freeyourgadget.gadgetbridge"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "org.psyhackers.Ashera"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 76
+        versionName "0.1.76"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        buildConfigField "String", "GIT_HASH_SHORT", "\"CUSTOM\""
+        buildConfigField "boolean", "INTERNET_ACCESS", "true"
+        buildConfigField "String", "FLAVOR", "\"mainline\""
+
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    sourceSets {
+        main {
+            java.srcDirs += '../external/Gadgetbridge/app/src/main/java'
+            res.srcDirs += '../external/Gadgetbridge/app/src/main/res'
+            aidl.srcDirs += '../external/Gadgetbridge/app/src/main/aidl'
+            java.srcDirs += "build/generated/sources/gbdao"
+            // Proto sources
+            proto.srcDirs += '../external/Gadgetbridge/app/src/main/proto'
+        }
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig true
+        aidl true
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:4.33.2'
+    }
+    generateProtoTasks {
+        all().each { final task ->
+            task.builtins {
+                java {
+                    option 'lite'
+                }
+            }
+        }
+    }
+}
+
+// Ensure GBDaoGenerator runs before build
+preBuild.dependsOn(":GBDaoGenerator:genSources")
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+    implementation platform('com.google.firebase:firebase-bom:34.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // --- Gadgetbridge Dependencies ---
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation "androidx.camera:camera-core:1.5.2"
+    implementation "androidx.camera:camera-camera2:1.5.2"
+    implementation 'androidx.camera:camera-view:1.5.2'
+    implementation 'androidx.camera:camera-lifecycle:1.5.2'
+    implementation "androidx.preference:preference-ktx:1.2.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.4.0"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.gridlayout:gridlayout:1.1.0"
+    implementation "androidx.palette:palette-ktx:1.0.0"
+    implementation "androidx.activity:activity-ktx:1.9.0"
+    implementation "androidx.fragment:fragment-ktx:1.6.2"
+    implementation "androidx.viewpager2:viewpager2:1.1.0"
+    implementation "androidx.work:work-runtime-ktx:2.9.0"
+    implementation 'androidx.lifecycle:lifecycle-process:2.7.0'
+    implementation "com.google.android.material:material:1.11.0"
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation "com.google.code.gson:gson:2.13.2"
+    implementation "no.nordicsemi.android:dfu:2.10.1"
+    implementation "com.github.tony19:logback-android:3.0.0"
+    implementation "org.slf4j:slf4j-api:2.0.17"
+    implementation "com.github.PhilJay:MPAndroidChart:3.1.0"
+    implementation "com.github.pfichtner:durationformatter:0.1.1"
+    implementation "de.cketti.library.changelog:ckchangelog:1.2.2"
+    implementation "net.e175.klaus:solarpositioning:0.1.10"
+    implementation "co.nstant.in:cbor:0.9"
+    implementation "org.greenrobot:greendao:2.2.1"
+    implementation "org.apache.commons:commons-lang3:3.20.0"
+    implementation "org.cyanogenmod:platform.sdk:6.0"
+    implementation 'com.jaredrummler:colorpicker:1.1.0'
+    implementation 'com.github.wax911.android-emojify:contract:1.9.7'
+    implementation 'com.github.wax911.android-emojify:emojify:1.9.7'
+    implementation 'com.github.wax911.android-emojify:gson:1.9.7'
+    implementation 'com.google.protobuf:protobuf-javalite:4.33.2'
+    implementation 'com.squareup.okhttp3:okhttp:5.3.2'
+    implementation 'org.msgpack:msgpack-core:0.9.11'
+    implementation 'com.github.ByteHamster:SearchPreference:2.7.3'
+    implementation 'com.github.mapsforge.mapsforge:mapsforge-core:0.26.1'
+    implementation 'com.github.mapsforge.mapsforge:mapsforge-map:0.26.1'
+    implementation 'com.github.mapsforge.mapsforge:mapsforge-map-reader:0.26.1'
+    implementation 'com.github.mapsforge.mapsforge:mapsforge-themes:0.26.1'
+    implementation 'com.github.mapsforge.mapsforge:mapsforge-map-android:0.26.1'
+    implementation 'com.caverock:androidsvg:1.4'
+    implementation 'org.jsoup:jsoup:1.22.1'
+    implementation 'org.ahocorasick:ahocorasick:0.6.3'
+    implementation 'com.google.guava:guava:33.4.8-android'
+    implementation 'androidx.health.connect:connect-client:1.1.0-alpha11'
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}

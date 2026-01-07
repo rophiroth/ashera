@@ -1,0 +1,103 @@
+--------- beginning of main
+01-06 10:54:03.720 10351 10351 I Capacitor/Console: File: https://localhost/_next/static/chunks/1737ac78767deeb2.js - Line 6 - Msg: [useJournal] Snapshot received. Size: 157, Empty: false
+01-06 10:54:03.725 10351 10351 I Capacitor/Console: File: https://localhost/_next/static/chunks/1737ac78767deeb2.js - Line 6 - Msg: Dashboard: realData mapped: 157
+01-06 10:54:05.321  4230  4230 D UXUtils : set ux flag--> setFlag = 400, old flag = 400, open = false, cal = 0
+01-06 10:54:05.322  4230  4230 D UXUtils : set process top-ui: pid=4230 value=2
+01-06 10:54:05.402  2321  2321 I AICCTModule: SensorFilter: Exit low light, ave = 95.05811 luxQueue=[95.0189, 94.75751, 95.1496, 95.0189, 95.541695, 94.75751, 95.8031, 94.62681, 95.0189, 94.88819]
+01-06 10:54:05.596  1522 21918 I sensors-hal: handle_sns_std_sensor_event:177, rgb sample: cct_avg:3624, red_raw:552, green_raw:372, blue_raw:369, clear_raw:755, wide_raw:0
+01-06 10:54:05.596  1522 21918 I sensors-hal: handle_sns_std_sensor_event:179, rgb sample: cur_cct:3630, calc_ir:0, lux:95, again:549, atime:0, ts=171430537621911
+--------- beginning of system
+01-06 10:54:05.654  2321  4069 D OplusSplitScreenManagerService: org.psyhackers.Ashera supportsSplitScreen by forceResizable activity return:true
+01-06 10:54:05.659  2321  4069 D OplusSplitScreenManagerService: org.psyhackers.Ashera supportsSplitScreen by forceResizable activity return:true
+01-06 10:54:05.763 15069 15122 D AppSwitchObserverHelper: packageName: com.android.launcher,com.android.launcher
+01-06 10:54:05.788  5770 10385 W ziparchive: Unable to open '/data/app/~~7vvjKrh3a_S3sjyeHcFddA==/org.psyhackers.Ashera-04J96Iz7X-qi9vW1QJXfuw==/base.dm': No such file or directory
+01-06 10:54:05.788  5770 10385 W ziparchive: Unable to open '/data/app/~~7vvjKrh3a_S3sjyeHcFddA==/org.psyhackers.Ashera-04J96Iz7X-qi9vW1QJXfuw==/base.dm': No such file or directory
+01-06 10:54:06.398  2321  3643 D OplusSmartBrightnessController: handleMessage MSG_LUX_CHANGED, mLux:94.626236 luxQueue=[94.0, 94.0, 95.0, 95.0, 95.0, 95.0, 95.0, 94.0]
+01-06 10:54:06.675  4230  5164 I SystemUi--Statusbar: PrivacyDotViewController-->scheduleUpdate: 
+01-06 10:54:06.738  5729  6853 D CommonScenarios-100-10771: mKernelVersion 5.4
+01-06 10:54:06.745  5729  6853 D CommonScenarios-100-10771: initState
+01-06 10:54:06.745  5729  6853 D AppStateRecord: handleMessage: EVENT_FOREGROUND_APP_CHANGE
+01-06 10:54:06.745  5729  6853 D AppStateRecord: isFgAppInStuckList
+01-06 10:54:06.745  5729  6853 D AppStateRecord: getFgAppInStuckList: fgApp org.psyhackers.Ashera
+01-06 10:54:06.746  5729  6853 D AppStateRecord: handleMessage: dataScoreCalc == null
+01-06 10:54:06.746  5729  6853 D CommonScenarios-100-10771: ActiveState process message 46
+01-06 10:54:06.746  5729  6853 D CommonScenarios-100-10771: DefaultState EVENT_INIT_STATE_COMPLETE
+01-06 10:54:06.746  5729  6853 D CommonScenarios-100-10771: startDataCollection
+01-06 10:54:06.746  5729  6853 D CommonScenarios-100-10771: current network isn't cellular,not need enable modem report
+01-06 10:54:06.777  4230  5164 I SystemUi--Statusbar: PrivacyDotViewController-->processNextViewState: 
+01-06 10:54:06.777  4230  5164 I SystemUi--Statusbar: PrivacyDotViewController-->resolveState ViewState(viewInitialized=true, systemPrivacyEventIsActive=false, shadeExpanded=false, qsExpanded=false, portraitRect=Rect(165, 0 - 1080, 103), landscapeRect=Rect(103, 0 - 2400, 103), upsideDownRect=Rect(0, 0 - 1080, 103), seascapeRect=Rect(0, 0 - 2285, 103), layoutRtl=false, rotation=0, paddingTop=34, paddingBottom=0, cornerIndex=1, designatedCorner=android.widget.FrameLayout{546f17d I.E...... ......ID 1013,0-1080,103 #7f0a085e app:id/privacy_dot_top_right_container viewInfo = }, contentDescription=Applications are using your camera., dotMargin=64)
+01-06 10:54:07.061 18826 18826 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService mCallingUid=10104 }
+01-06 10:54:07.175  4230  4230 I SystemUi--Keyguard: KeyguardUtils-->density is 0 sInitialDisplayDensity:480
+01-06 10:54:07.244  2321  3741 D OplusSplitScreenManagerService: org.psyhackers.Ashera supportsSplitScreen by forceResizable activity return:true
+01-06 10:54:07.398  2321  3643 D OplusSmartBrightnessController: handleMessage MSG_LUX_CHANGED, mLux:95.0 luxQueue=[95.0, 95.0, 95.0, 95.0, 95.0]
+01-06 10:54:07.402  2321  2321 I AICCTModule: SensorFilter: Exit low light, ave = 95.35872 luxQueue=[95.411, 95.6724, 95.411, 95.280304, 94.75751, 95.411, 95.541695, 95.541695, 95.1496, 95.411]
+01-06 10:54:07.428 10351 10663 D ProfileInstaller: Installing profile for org.psyhackers.Ashera
+01-06 10:54:07.433  5729  6853 D CommonScenarios-100-10771: transportLayerQosChange TransportLayerData{link_index=20, uid=10771, uplink_srtt=0, uplink_packets=0, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=0, downlink_packets=0, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=0, uplink_udp_rate=0, downlink_tcp_rate=0, downlink_udp_rate=0}
+01-06 10:54:07.433  5729  6853 D CommonScenarios-100-10771: ActiveState process message 2
+01-06 10:54:07.433  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE
+01-06 10:54:07.433  5729  6853 D CommonScenarios-100-10771: transport layer data is invalid
+01-06 10:54:07.433  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE score is invalid
+01-06 10:54:07.597  1522 21918 I sensors-hal: handle_sns_std_sensor_event:177, rgb sample: cct_avg:3626, red_raw:554, green_raw:374, blue_raw:371, clear_raw:756, wide_raw:0
+01-06 10:54:07.597  1522 21918 I sensors-hal: handle_sns_std_sensor_event:179, rgb sample: cur_cct:3630, calc_ir:0, lux:95, again:549, atime:0, ts=171432537518943
+01-06 10:54:07.871  2321  3596 D Theia.TransparentWindow: handleMessage CHECK_TRANS_WINDOW_ERROR_MSG
+01-06 10:54:08.357  2321  3881 V AlarmManager: sending alarm Alarm{7f77fa9 type 2 origWhen 171300068 whenElapsed 171300068 com.whatsapp.w4b} uid 10321 whenElapsed 171300068 windowLength 3600000 maxWhenElapsed 174900068 repeatInterval 0 action com.whatsapp.w4b.action.HEARTBEAT_WAKEUP component ComponentInfo{com.whatsapp.w4b/com.whatsapp.alarmservice.AlarmBroadcastReceiver} flags 0x4 procName com.whatsapp.w4b
+01-06 10:54:08.362  2321  3881 V AlarmManager: sending alarm Alarm{2fd092e type 2 origWhen 171423295 whenElapsed 171423295 com.heytap.mcs} uid 1000 whenElapsed 171423295 windowLength 10000 maxWhenElapsed 171433295 repeatInterval 0 action com.heytap.mcs.action component null flags 0x8 procName com.heytap.mcs
+01-06 10:54:08.369  2321  3616 W ProcessStats: Tracking association SourceState{2a2c752 com.google.android.googlequicksearchbox:googleapp/10120 BFgs #427614} whose proc state 4 is better than process ProcessState{341f127 com.google.android.adservices.api/10389 pkg=com.google.android.adservices.api} proc state 14 (110 skipped)
+01-06 10:54:08.380  2321  3881 V AlarmManager: sending alarm Alarm{46865c type 3 origWhen 171324307 whenElapsed 171324307 com.oplus.nhs} uid 1001 whenElapsed 171324307 windowLength 225000 maxWhenElapsed 171549307 repeatInterval 300000 action oplus.intent.action.INTERNAL_LOOP_UPDATE_ACTIVITYINFO_ALARM component ComponentInfo{com.oplus.nhs/com.oplus.nhs.pwr.ModemAci.ModemAciAlarmReceiver} flags 0x8 procName com.oplus.nhs
+01-06 10:54:08.382  2321  3881 V AlarmManager: sending alarm Alarm{bd48a3a type 3 origWhen 171355301 whenElapsed 171355301 android} uid 1000 whenElapsed 171355301 windowLength 384039 maxWhenElapsed 171739340 repeatInterval 0 action null component null tag *job.cleanup* flags 0x8 procName system_server
+01-06 10:54:08.382  2321  3881 V AlarmManager: sending alarm Alarm{e78b6eb type 3 origWhen 171370551 whenElapsed 171370551 com.oplus.metis} uid 10183 whenElapsed 171370551 windowLength 225000 maxWhenElapsed 171595551 repeatInterval 300000 action oplus.intent.action.SORT_ALARM_ACTION component null flags 0x0 procName com.oplus.metis
+01-06 10:54:08.396  5741  5741 D ModemAciService: onReceive oplus.intent.action.INTERNAL_LOOP_UPDATE_ACTIVITYINFO_ALARM
+01-06 10:54:08.400  5741  6809 I ModemAciService: handleMessage:12
+01-06 10:54:08.401  5741  6809 I ModemAciService: handleMessage:14
+01-06 10:54:08.408  5782  5782 D RadioMessenger: handleMessage Request msgid 2220
+01-06 10:54:08.408  5782  5782 D RadioMessenger: handleSetSyncWithAp: -1, syncFlag: 1
+01-06 10:54:08.408  5782  5782 D QtiRadioService: setSyncWithAp
+01-06 10:54:08.409  2979  3238 D QmiClient: qmiServiceEventCallback recv msg id 1085
+01-06 10:54:08.409  2979  3238 D QmiVsClient: enter - onQmiServiceEventCallback msgId 1085
+01-06 10:54:08.409  2979  3238 D QmiVsClientEvent: qmiVsClientNotifyNecEvent - RADIO_EVENT_NEC_IND
+01-06 10:54:08.409  2979  3013 D RadioService: setSyncWithAp with instance 0
+01-06 10:54:08.409  2979  3013 D VendorService: VendorService::setSyncWithAp
+01-06 10:54:08.409  2979  3025 D VsProxy : handleMessage msg is 2403
+01-06 10:54:08.409  2979  3025 D VsProxy : handleNecInd for instance 0
+01-06 10:54:08.409  2979  3025 D QmiVsClient: setSyncWithAp - enter
+01-06 10:54:08.409  2979  3025 E QmiVsClient: sendAsyncRequest QMI_VS_SET_SYNC_WITH_AP_REQ_MSG_V01 ret 0
+01-06 10:54:08.410  2979  3025 D VsProxy : handleMessage msg is 4001
+01-06 10:54:08.410  5782  6542 D SubsysRadioIndication: radioNecInd 
+01-06 10:54:08.410  2979  3025 D RadioProxy: setSyncWithAp : response cb for instance 0
+01-06 10:54:08.412  2979  2979 D RadioServiceResponse: RadioServiceResponse::setSyncWithApResponse
+01-06 10:54:08.412  5782  7379 D SubsysRadioResponse: setSyncWithApResponse info.error = 0
+01-06 10:54:08.412  5782  7379 D RadioProxyJ: [PHONE0][3325]< setSyncWithApResponse 
+01-06 10:54:08.412  5782  5782 D RadioMessenger: handleMessage Response msgid 210
+01-06 10:54:08.413  5729  6860 D SubsysCallManager: handleMessage what:102
+01-06 10:54:08.413  5729  6860 D SubsysCallManager: parseMdmInfoData len:392
+01-06 10:54:08.413  5729  6860 D SubsysCallManager: onMdmEvent moduleId:6,eventId:4
+01-06 10:54:08.413  5729  6860 D ModemDataAnalysis: phoneId = 0, moduleId = 6, onEvent...4, version = 0, size:380
+01-06 10:54:08.413  5729  6860 D ModemDataAnalysis: isCallNeedsEventId needs = false
+01-06 10:54:08.414  5741  6809 I ModemAciService: handleMessage:5
+01-06 10:54:08.414  5741  6809 I ModemAciService: sendSettleObj2Statsd over!
+01-06 10:54:08.416  5741  6809 I ModemAciService: UMF LO,DC: OplusModemActivityInfo{ date=01-06 10:54:08.414 modemPowermA[]=[10.48,10.48,10.48] sleepTimeMs=44370 idleTimeMs=235 rxTimeMs=1440 5gRxTimeMs=0 txTimeMs[]=[0, 0, 0, 0, 0] 5gTxTimeMsSIM1=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeMsSIM2=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeSum[]=[0, 0] techTimeMs[]=[0, 0, 1440, 0, 0, 0, 0, 0, 0] rrcConn10sC[]=[0, 0] rrcConn20sC[]=[0, 0] rrcConnMore20sC[]=[0, 0] rrcConnC[]=[0, 0] csChangedC[]=[0, 0] psChangedC[]=[0, 0] iRatC[]=[0, 0] cellUpdateC[]=[0, 0] nwSrchC[]=[0, 0] nwSrchT[]=[0, 0] lteRrcConnT[]=[0, 0] psRegT[]=[0, 0] csRegT[]=[46, 0] psNoRegT[]=[46, 46] csNoRegT[]=[0, 46] sigGrid0T[]=[0, 0] endcActT[]=[0, 0] saActT[]=[0, 0] gpsTimeMs=1 wlanTimeMs=0 regReqFbC[]=[0, 0] regReqTransAcqDbC[]=[0, 0] saRrcConn10sC[]=[0, 0] saRrcConn20sC[]=[0, 0] saRrcConnMore20sC[]=[0, 0] saRrcConnC[]=[0, 0] lteHoC[]=[0, 0] saHoC[]=[0, 0] saRrcConnT[]=[0, 0] sensorStationaryC=0 sensorStationaryT=0 modemStationaryC=0 modemStationaryT=0}
+01-06 10:54:08.456  5729  6853 D CommonScenarios-100-10771: transportLayerQosChange TransportLayerData{link_index=20, uid=10771, uplink_srtt=0, uplink_packets=0, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=0, downlink_packets=0, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=0, uplink_udp_rate=0, downlink_tcp_rate=0, downlink_udp_rate=0}
+01-06 10:54:08.456  5729  6853 D CommonScenarios-100-10771: ActiveState process message 2
+01-06 10:54:08.456  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE
+01-06 10:54:08.456  5729  6853 D CommonScenarios-100-10771: transport layer data is invalid
+01-06 10:54:08.456  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE score is invalid
+01-06 10:54:08.724  2321  4069 D OplusSplitScreenManagerService: org.psyhackers.Ashera supportsSplitScreen by forceResizable activity return:true
+01-06 10:54:08.732  2321  4069 D OplusSplitScreenManagerService: org.psyhackers.Ashera supportsSplitScreen by forceResizable activity return:true
+01-06 10:54:09.401  2321  2321 I AICCTModule: SensorFilter: Exit low light, ave = 95.55477 luxQueue=[95.0189, 94.62681, 95.541695, 95.541695, 95.8031, 96.0645, 95.411, 96.0645, 96.0645, 95.411]
+01-06 10:54:09.481  5729  6853 D CommonScenarios-100-10771: transportLayerQosChange TransportLayerData{link_index=20, uid=10771, uplink_srtt=0, uplink_packets=0, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=0, downlink_packets=0, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=0, uplink_udp_rate=0, downlink_tcp_rate=0, downlink_udp_rate=0}
+01-06 10:54:09.481  5729  6853 D CommonScenarios-100-10771: ActiveState process message 2
+01-06 10:54:09.481  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE
+01-06 10:54:09.481  5729  6853 D CommonScenarios-100-10771: transport layer data is invalid
+01-06 10:54:09.481  5729  6853 D CommonScenarios-100-10771: ActiveState EVENT_NETWORK_KPI_CHANGE score is invalid
+01-06 10:54:09.597  1522 21918 I sensors-hal: handle_sns_std_sensor_event:177, rgb sample: cct_avg:3629, red_raw:552, green_raw:372, blue_raw:369, clear_raw:754, wide_raw:0
+01-06 10:54:09.597  1522 21918 I sensors-hal: handle_sns_std_sensor_event:179, rgb sample: cur_cct:3630, calc_ir:0, lux:95, again:549, atime:0, ts=171434537621026
+01-06 10:54:09.599  2321  3643 D OplusSmartBrightnessController: handleMessage MSG_LUX_CHANGED, mLux:95.57271 luxQueue=[96.0, 96.0, 95.0, 96.0, 96.0, 95.0, 95.0]
+01-06 10:54:09.737  2321  4099 D OplusNetKit: in getLpByInterface name from LP: [wlan0]
+01-06 10:54:09.753  2321  4099 D TrafficStats: tagSocket(740) with statsTag=0xffffffff, statsUid=-1
+01-06 10:54:09.772  2321  4099 D OplusNetRttKit: getIcmpEchoRtt each addr:192.168.1.1 Rtt: 22
+01-06 10:54:09.772  2321  4099 D TrafficStats: tagSocket(740) with statsTag=0xffffffff, statsUid=-1
+01-06 10:54:09.782  2321  4099 D OplusNetRttKit: getIcmpEchoRtt each addr:192.168.1.1 Rtt: 10
+01-06 10:54:09.782  2321  4099 D TrafficStats: tagSocket(740) with statsTag=0xffffffff, statsUid=-1
+01-06 10:54:09.788  2321  4099 D OplusNetRttKit: getIcmpEchoRtt each addr:192.168.1.1 Rtt: 5
+01-06 10:54:09.788  2321  4099 D OplusNetRttKit: getIcmpEchoRtt addr:192.168.1.1 avgRtt: 12
+01-06 10:54:10.151 25186 27279 D TrafficStats: tagSocket(291) with statsTag=0xffffffff, statsUid=-1
